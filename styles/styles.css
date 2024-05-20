@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+    color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header, footer{
+    border: 1px solid red;
+} */
+
+header nav, footer > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container a,header .container a{
+    text-decoration: none;
+}
+
+footer .container .logo, header .container .logo{
+    font-size: 30px;
+    /* color: #FFC0CB; */
+    color: #F092DD; 
+    font-weight: 900;
+    transition: all .3s linear;
+}
+footer .container .logo:hover, header .container .logo:hover{
+    transform: scale(1.09);
+    color: #ff5f79;
+}
+
+.link{
+    text-decoration: none;
+    background-color: #ff5f79;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 20px;
+    transition: all .3s linear;
+}
+.link:hover{
+    transform: scale(1.09);
+    /* background-color: #F092DD; */
+    background-color: #f53ad0;
+    border-radius: 0 15px;
+    transform: scale(1.09);
+    color: rgb(30, 45, 51);
+}
+
+header .welcome{
+    margin-bottom: 50px;
+}
+
+.mar-bot{
+    margin-bottom: 50px;
+}
+
+.welcome{
+    margin-bottom: 50px;
+}
+
+.welcome h1{
+    font-size: 40px;
+    color: #ede6ff;
+    margin-bottom: 20px;
+}
+
+.welcome p{
+    font-weight: 100;
+    margin-bottom: 30px;
+    color: #cbb6ff;
+}
+
+.welcome-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-img img{
+    max-width: 300px;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+.welcome-img img:hover{
+    transform: scale(1.04);
+    border-radius: 0 50px;
+}
+
+/* ----------------Cards---------------- */
+
+
+.regular-card-header{
+    /* background-color: #a07bfd; */
+    background-image: linear-gradient(#cbb7ff,#b99eff, #7c5888, #5a1afd) ;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.regular-card-header h2{
+    color: #E0E0E0;
+}
+
+.regular-card{
+    margin-bottom: 50px;
+}
+
+.cards-section .regular-card .img-box{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* background-color: rgb(115, 201, 169); */
+    /* background-color: rgb(153, 126, 161); */
+    background-color: #9066fc;
+}
+
+.cards-section .regular-card .img-box img{
+    width: 60px;
+}
+
+
+.container {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-inline: 16px;
+}
+
+.bt{
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.bt p{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* animation */
+.regular-card .img-box{
+    transition: all .4s linear;
+}
+.regular-card:hover .img-box{
+    margin-left: 150px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    footer, header{
+        margin-bottom: 50px;
+        /* background-color: #ede6ff; */
+        background-color: #cbb6ff;
+        border-radius: 20px;
+        margin: 10px  20px 30px 20px;
+    }
+
+    footer{
+        background-color: #6d34ff;
+    }
+
+    footer .container .logo, header .container .logo{
+        font-size: 35px;
+        color: rgb(57, 24, 24);
+    }
+
+    .welcome h1{
+        font-size: 50px;
+    }
+
+    .welcome p{
+        width: 380px;
+    }
+
+    .welcome-img img{
+        max-width: 350px;
+        border-radius: 50%;
+    }
+
+    .container{
+        margin: auto;
+        /* max-width: 689px; */
+        max-width: 800px;
+    }
+
+    .welcome .container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .regular-card-header h2{
+        width: 250px;
+    }
+
+    .cards-section .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    .container{
+        max-width: 1110px;
+    }
+
+    .cards-section .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
